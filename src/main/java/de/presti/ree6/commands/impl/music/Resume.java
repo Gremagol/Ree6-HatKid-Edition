@@ -39,7 +39,7 @@ public class Resume implements ICommand {
                 commandEvent.getGuild().getJDA().getSelfUser().getAvatarUrl());
         em.setTitle(commandEvent.getResource("label.musicPlayer"));
         em.setThumbnail(commandEvent.getGuild().getJDA().getSelfUser().getAvatarUrl());
-        em.setColor(Color.GREEN);
+        em.setColor(new Color(0xFBD76B));
         em.setDescription(commandEvent.getResource("message.music.resume"));
         em.setFooter(commandEvent.getGuild().getName() + " - " + Data.ADVERTISEMENT, commandEvent.getGuild().getIconUrl());
 

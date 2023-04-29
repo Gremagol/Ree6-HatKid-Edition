@@ -191,7 +191,7 @@ public class MusicWorker {
                             .setAuthor(guild.getJDA().getSelfUser().getName(), Data.WEBSITE, guild.getJDA().getSelfUser().getAvatarUrl())
                             .setTitle(LanguageService.getByGuild(guild, "label.musicPlayer"))
                             .setThumbnail(guild.getJDA().getSelfUser().getAvatarUrl())
-                            .setColor(Color.GREEN)
+                            .setColor(new Color(0xFBD76B))
                             .setDescription(LanguageService.getByGuild(guild, "message.music.queueAdded.default", FormatUtil.filter(track.getInfo().title)))
                             .setFooter(guild.getName() + " - " + Data.ADVERTISEMENT, guild.getIconUrl()), 5, messageChannel, interactionHook);
 
@@ -216,7 +216,7 @@ public class MusicWorker {
                             .setAuthor(guild.getJDA().getSelfUser().getName(), Data.WEBSITE, guild.getJDA().getSelfUser().getAvatarUrl())
                             .setTitle(LanguageService.getByGuild(guild, "label.musicPlayer"))
                             .setThumbnail(guild.getJDA().getSelfUser().getAvatarUrl())
-                            .setColor(Color.GREEN)
+                            .setColor(new Color(0xFBD76B))
                             .setDescription(LanguageService.getByGuild(guild, "message.music.queueAdded.firstOfList", FormatUtil.filter(firstTrack.getInfo().title), FormatUtil.filter(playlist.getName())))
                             .setFooter(guild.getName() + " - " + Data.ADVERTISEMENT, guild.getIconUrl()), 5, messageChannel, interactionHook);
 
@@ -239,7 +239,7 @@ public class MusicWorker {
                             .setAuthor(guild.getJDA().getSelfUser().getName(), Data.WEBSITE, guild.getJDA().getSelfUser().getAvatarUrl())
                             .setTitle(LanguageService.getByGuild(guild, "label.musicPlayer"))
                             .setThumbnail(guild.getJDA().getSelfUser().getAvatarUrl())
-                            .setColor(Color.GREEN)
+                            .setColor(new Color(0xFBD76B))
                             .setDescription(LanguageService.getByGuild(guild, "message.music.searchUrlFailed", FormatUtil.filter(trackUrl)))
                             .setFooter(guild.getName() + " - " + Data.ADVERTISEMENT, guild.getIconUrl()), 5, messageChannel, interactionHook);
             }
@@ -254,7 +254,7 @@ public class MusicWorker {
                             .setAuthor(guild.getJDA().getSelfUser().getName(), Data.WEBSITE, guild.getJDA().getSelfUser().getAvatarUrl())
                             .setTitle(LanguageService.getByGuild(guild, "label.musicPlayer"))
                             .setThumbnail(guild.getJDA().getSelfUser().getAvatarUrl())
-                            .setColor(Color.GREEN)
+                            .setColor(new Color(0xFBD76B))
                             .setDescription(LanguageService.getByGuild(guild, "message.music.failedLoading", exception.getMessage()))
                             .setFooter(guild.getName() + " - " + Data.ADVERTISEMENT, guild.getIconUrl()), 5, messageChannel, interactionHook);
             }
@@ -338,7 +338,7 @@ public class MusicWorker {
                                     Data.WEBSITE, guild.getJDA().getSelfUser().getAvatarUrl())
                             .setTitle(LanguageService.getByGuildOrInteraction(guild, interaction, "label.musicPlayer"))
                             .setThumbnail(guild.getJDA().getSelfUser().getAvatarUrl())
-                            .setColor(Color.GREEN)
+                            .setColor(new Color(0xFBD76B))
                             .setDescription(LanguageService.getByGuildOrInteraction(guild, interaction, "message.music.notFound", value))
                             .setFooter(guild.getName() + " - " + Data.ADVERTISEMENT, guild.getIconUrl());
                     Main.getInstance().getCommandManager().sendMessage(em, 5, channel, interactionHook);
@@ -375,7 +375,7 @@ public class MusicWorker {
                                     Data.WEBSITE, guild.getJDA().getSelfUser().getAvatarUrl())
                             .setTitle(LanguageService.getByGuildOrInteraction(guild, interaction, "label.musicPlayer"))
                             .setThumbnail(guild.getJDA().getSelfUser().getAvatarUrl())
-                            .setColor(Color.GREEN)
+                            .setColor(new Color(0xFBD76B))
                             .setDescription(LanguageService.getByGuildOrInteraction(guild, interaction, "message.music.notFoundMultiple", loadFailed.size()))
                             .setFooter(guild.getName() + " - " + Data.ADVERTISEMENT, guild.getIconUrl());
                     Main.getInstance().getCommandManager().sendMessage(em, 5, channel, interactionHook);
@@ -438,7 +438,7 @@ public class MusicWorker {
             Main.getInstance().getCommandManager().sendMessage(new EmbedBuilder().setAuthor(channel.getJDA().getSelfUser().getName(), Data.WEBSITE, channel.getJDA().getSelfUser().getAvatarUrl())
                     .setTitle(LanguageService.getByGuild(channel.asGuildMessageChannel().getGuild(), "label.musicPlayer"))
                     .setThumbnail(channel.getJDA().getSelfUser().getAvatarUrl())
-                    .setColor(Color.GREEN)
+                    .setColor(new Color(0xFBD76B))
                     .setDescription(LanguageService.getByGuild(channel.asGuildMessageChannel().getGuild(), "message.music.skip"))
                     .setFooter(channel.asGuildMessageChannel().getGuild().getName() + " - " + Data.ADVERTISEMENT, channel.asGuildMessageChannel().getGuild().getIconUrl()), 5, channel, interactionHook);
         }

@@ -46,7 +46,7 @@ public interface ICommand {
             ThreadUtil.createThread(x -> AnnouncementManager.getAnnouncementList().forEach(a -> {
                 if (!AnnouncementManager.hasReceivedAnnouncement(commandEvent.getGuild().getIdLong(), a.id())) {
                     Main.getInstance().getCommandManager().sendMessage(new EmbedBuilder().setTitle(a.title())
-                            .setAuthor("Ree6-Info")
+                            .setAuthor("HatKid-Info")
                             .setDescription(a.content().replace("\\n", "\n") + "\n\n" + LanguageService.getByGuild(commandEvent.getGuild(), "message.news.notice"))
                             .setFooter(Data.ADVERTISEMENT, commandEvent.getGuild().getIconUrl())
                             .setColor(BotWorker.randomEmbedColor()), 15, commandEvent.getChannel());

@@ -39,7 +39,7 @@ public class SongInfo implements ICommand {
                 commandEvent.getGuild().getJDA().getSelfUser().getAvatarUrl());
         em.setTitle(commandEvent.getResource("label.musicPlayer"));
         em.setThumbnail(commandEvent.getGuild().getJDA().getSelfUser().getAvatarUrl());
-        em.setColor(Color.GREEN);
+        em.setColor(new Color(0xFBD76B));
         em.setDescription(audioTrack == null ? commandEvent.getResource("message.music.notPlaying") :
                 commandEvent.getResource("message.music.songInfo", audioTrack.getInfo().title, audioTrack.getInfo().author,
                 FormatUtil.getStatusEmoji(guildMusicManager.getPlayer()) + FormatUtil.progressBar((double)audioTrack.getPosition() / audioTrack.getDuration()),

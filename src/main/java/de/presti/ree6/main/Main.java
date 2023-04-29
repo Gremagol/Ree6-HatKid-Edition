@@ -392,7 +392,7 @@ public class Main {
                 ArrayUtil.messageIDwithUser.clear();
 
                 BotWorker.getShardManager().getShards().forEach(jda ->
-                        BotWorker.setActivity(jda, "ree6.de | %guilds% Servers. (%shard%)", Activity.ActivityType.PLAYING));
+                        BotWorker.setActivity(jda, "Start with /help | %guilds% Servers. (%shard%)", Activity.ActivityType.PLAYING));
 
                 log.info("[Stats] ");
                 log.info("[Stats] Today's Stats:");
@@ -449,7 +449,7 @@ public class Main {
                         if (Timestamp.from(Instant.now()).after(Timestamp.from(scheduledMessage.getCreated().toInstant().plusMillis(scheduledMessage.getDelayAmount())))) {
 
                             WebhookUtil.sendWebhook(null, new WebhookMessageBuilder()
-                                    .setUsername("Ree6-Scheduler")
+                                    .setUsername("HatKid-Scheduler")
                                     .setAvatarUrl(BotWorker.getShardManager().getShards().get(0).getSelfUser().getAvatarUrl())
                                     .append(scheduledMessage.getMessage()).build(), scheduledMessage.getScheduledMessageWebhook(), false);
 
@@ -463,7 +463,7 @@ public class Main {
                         if (Timestamp.from(Instant.now()).after(Timestamp.from(scheduledMessage.getCreated().toInstant().plusMillis(scheduledMessage.getDelayAmount())))) {
 
                             WebhookUtil.sendWebhook(null, new WebhookMessageBuilder()
-                                    .setUsername("Ree6-Scheduler")
+                                    .setUsername("HatKid-Scheduler")
                                     .setAvatarUrl(BotWorker.getShardManager().getShards().get(0).getSelfUser().getAvatarUrl())
                                     .append(scheduledMessage.getMessage()).build(), scheduledMessage.getScheduledMessageWebhook(), false);
 
@@ -474,7 +474,7 @@ public class Main {
                         if (Timestamp.from(Instant.now()).after(Timestamp.from(scheduledMessage.getLastUpdated().toInstant().plusMillis(scheduledMessage.getDelayAmount())))) {
 
                             WebhookUtil.sendWebhook(null, new WebhookMessageBuilder()
-                                    .setUsername("Ree6-Scheduler")
+                                    .setUsername("HatKid-Scheduler")
                                     .setAvatarUrl(BotWorker.getShardManager().getShards().get(0).getSelfUser().getAvatarUrl())
                                     .append(scheduledMessage.getMessage()).build(), scheduledMessage.getScheduledMessageWebhook(), false);
 

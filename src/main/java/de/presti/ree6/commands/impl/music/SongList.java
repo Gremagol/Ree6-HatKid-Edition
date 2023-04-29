@@ -37,7 +37,7 @@ public class SongList implements ICommand {
         em.setAuthor(commandEvent.getGuild().getJDA().getSelfUser().getName(), Data.WEBSITE, commandEvent.getGuild().getJDA().getSelfUser().getAvatarUrl());
         em.setTitle(commandEvent.getResource("label.musicPlayer"));
         em.setThumbnail(commandEvent.getGuild().getJDA().getSelfUser().getAvatarUrl());
-        em.setColor(Color.GREEN);
+        em.setColor(new Color(0xFBD76B));
         em.setDescription(Main.getInstance().getMusicWorker().getGuildAudioPlayer(commandEvent.getGuild()).getScheduler().getQueue().isEmpty() ?
                 commandEvent.getResource("message.music.songQueueEmpty") :
                 (end.length() > 4096 ? commandEvent.getResource("command.perform.errorWithException","Error (M-SL-01)") :

@@ -43,8 +43,8 @@ public class MusicPanel implements ICommand {
                         guildMusicManager.getPlayer().getPlayingTrack().getInfo() : null;
 
         EmbedBuilder embedBuilder = new EmbedBuilder()
-                .setColor(Color.MAGENTA)
-                .setImage("https://images.unsplash.com/photo-1546977463-943d58b78c19")
+                .setColor(new Color(0xFBD76B))
+                .setImage("https://cdn.discordapp.com/attachments/1076536569311277076/1084143256146821150/MusicBG.png")
                 .setTitle("**" + (audioTrackInfo != null ? commandEvent.getResource("message.music.songInfoSlim", audioTrackInfo.title, audioTrackInfo.author)
                         : commandEvent.getResource("message.music.notPlaying")) + "**")
                 .setFooter(commandEvent.getGuild().getName() + " - " + Data.ADVERTISEMENT, commandEvent.getGuild().getIconUrl());

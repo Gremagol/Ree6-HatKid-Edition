@@ -218,7 +218,7 @@ public class TrackScheduler extends AudioEventAdapter {
                         .setAuthor(guildMusicManager.getGuild().getSelfMember().getEffectiveName(), Data.WEBSITE, guildMusicManager.getGuild().getSelfMember().getEffectiveAvatarUrl())
                         .setTitle(LanguageService.getByGuild(guildMusicManager.getGuild(), "label.musicPlayer"))
                         .setThumbnail(guildMusicManager.getGuild().getSelfMember().getEffectiveAvatarUrl())
-                        .setColor(Color.GREEN)
+                        .setColor(new Color(0xFBD76B))
                         .setDescription(LanguageService.getByGuild(guildMusicManager.getGuild(), "message.music.songNext", FormatUtil.filter(track.getInfo().title)))
                         .setFooter(guildMusicManager.getGuild().getName() + " - " + Data.ADVERTISEMENT, guildMusicManager.getGuild().getIconUrl()), 5, getChannel());
             player.startTrack(track.getState() == AudioTrackState.FINISHED ? track.makeClone() : track, false);
@@ -274,7 +274,7 @@ public class TrackScheduler extends AudioEventAdapter {
                 .setAuthor(guildMusicManager.getGuild().getSelfMember().getEffectiveName(), Data.WEBSITE, guildMusicManager.getGuild().getSelfMember().getEffectiveAvatarUrl())
                 .setTitle(LanguageService.getByGuild(guildMusicManager.getGuild(), "label.musicPlayer"))
                 .setThumbnail(guildMusicManager.getGuild().getSelfMember().getEffectiveAvatarUrl())
-                .setColor(Color.GREEN)
+                .setColor(new Color(0xFBD76B))
                 .setDescription(LanguageService.getByGuild(guildMusicManager.getGuild(), "message.music.seek.success", FormatUtil.formatTime(player.getPlayingTrack().getPosition())))
                 .setFooter(guildMusicManager.getGuild().getName() + " - " + Data.ADVERTISEMENT, guildMusicManager.getGuild().getIconUrl()), 5, getChannel());
     }
@@ -366,7 +366,7 @@ public class TrackScheduler extends AudioEventAdapter {
             em.setAuthor(guildMusicManager.getGuild().getSelfMember().getEffectiveName(), Data.WEBSITE, guildMusicManager.getGuild().getSelfMember().getEffectiveAvatarUrl());
             em.setTitle(LanguageService.getByGuild(guildMusicManager.getGuild(), "label.musicPlayer"));
             em.setThumbnail(guildMusicManager.getGuild().getSelfMember().getEffectiveAvatarUrl());
-            em.setColor(Color.GREEN);
+            em.setColor(new Color(0xFBD76B));
             em.setDescription(LanguageService.getByGuild(guildMusicManager.getGuild(), "message.music.stop"));
         } else {
             em.setAuthor(guildMusicManager.getGuild().getSelfMember().getEffectiveName(), Data.WEBSITE, guildMusicManager.getGuild().getSelfMember().getEffectiveAvatarUrl());

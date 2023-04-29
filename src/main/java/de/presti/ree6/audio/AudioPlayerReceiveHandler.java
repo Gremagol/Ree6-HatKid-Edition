@@ -175,7 +175,7 @@ public class AudioPlayerReceiveHandler implements AudioReceiveHandler {
             if (voiceChannel.canTalk()) {
                 message.editMessageEmbeds(new EmbedBuilder()
                         .setDescription(LanguageService.getByGuild(voiceChannel.getGuild(), "message.recording.stopped"))
-                        .setColor(Color.GREEN)
+                        .setColor(new Color(0xFBD76B))
                         .setFooter(Data.ADVERTISEMENT, voiceChannel.getGuild().getIconUrl())
                         .setTitle(LanguageService.getByGuild(voiceChannel.getGuild(), "label.recording.finished"))
                         .build()).setActionRow(new ButtonImpl("ree6RedirectButton", LanguageService.getByGuild(voiceChannel.getGuild(), "label.download"), ButtonStyle.LINK,
