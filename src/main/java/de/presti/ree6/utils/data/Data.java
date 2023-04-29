@@ -21,6 +21,6 @@ public class Data {
     /**
      * Advertisement, because of Sponsors.
      */
-    public static final String ADVERTISEMENT = "powered by Tube-Hosting";
+    public static final String ADVERTISEMENT = "powered by Gremagol";
 }
 
